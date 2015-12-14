@@ -34,3 +34,6 @@ The Zen of Python
 
 ### Lesson 1: Variables, expressions, and statements
 Follows lesson 2 of UMich course. Introduces values, variables, operators, and statements. **Project** you create a milestone marker program.
+
+### Lesson 2: Conditional Execution
+Follows lesson 3 of UMich course. Introduces comparison and logical operators, if statements, and try except blocks. **Project** you create a program to suggest which car to buy.
