@@ -37,3 +37,6 @@ Follows lesson 2 of UMich course. Introduces values, variables, operators, and s
 
 ### Lesson 2: Conditional Execution
 Follows lesson 3 of UMich course. Introduces comparison and logical operators, if statements, and try except blocks. **Project** you create a program to suggest which car to buy.
+
+### Lesson 3: Functions
+Follows lesson 4 of UMich course. Introduces functions, modules, parameters, arguments, and the return statement. **Project** you will create a program that lets you roll the die in yatzee.
