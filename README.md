@@ -40,3 +40,6 @@ Follows lesson 3 of UMich course. Introduces comparison and logical operators, i
 
 ### Lesson 3: Functions
 Follows lesson 4 of UMich course. Introduces functions, modules, parameters, arguments, and the return statement. **Project** you will create a program that lets you roll the die in yatzee.
+
+### Lesson 4: Iteration
+Follows lesson 5 of UMich course. Introduces loops and list. **Project** you will create a program that let you hunt for treasure.
