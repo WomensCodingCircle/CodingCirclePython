@@ -43,3 +43,6 @@ Follows lesson 4 of UMich course. Introduces functions, modules, parameters, arg
 
 ### Lesson 4: Iteration
 Follows lesson 5 of UMich course. Introduces loops and list. **Project** you will create a program that let you hunt for treasure.
+
+### Lesson 5: Strings
+Follows lesson 6 of UMich course. Explores strings indexing and functions. **Project** you create a program that processes DNA.
