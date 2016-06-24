@@ -7,6 +7,6 @@ driving_year = birth_year + 16
 drinking_year = birth_year + 21
 president_year = birth_year + 35
 
-print "You are able to drive in " + driving_year
-print "You are able to drink in " + drinking_year
-print "You are able to run for president in " + president_year
+print "You are able to drive in " + str(driving_year)
+print "You are able to drink in " + str(drinking_year)
+print "You are able to run for president in " + str(president_year)
