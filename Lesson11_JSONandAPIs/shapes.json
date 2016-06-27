@@ -1,0 +1,14 @@
+{
+	"circle" : {
+		"area": "pi * r ^2",
+		"sides": 1
+	},
+	"square" : {
+		"area": "w^2",
+		"sides": 4
+	},
+	"triangle": {
+		"area": "0.5 * b * h",
+		"sides": 3
+	}
+}
