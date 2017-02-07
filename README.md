@@ -3,7 +3,7 @@
 This is a series of ipython notebooks and projects that follow along with the University of Michigan class  [Python for Informatics](http://pythonlearn.com/). They are intended to be an easy way to practice what you have learned.
 
 ## Prerequisites
-You need to have the [anaconda](https://www.continuum.io/downloads) distribution of python 2.7 installed. We will be using ipython notebook, if you are new to this I recommend this [tutorial](http://opentechschool.github.io/python-data-intro/core/notebook.html) from OpenTechSchool. You will also need a text editor to open the solutions for the projects. I recommend [Sublime Text](http://www.sublimetext.com/). Other options include Notepad, Notepad++, Text Wrangler, or Atom.
+You need to have the [anaconda](https://www.continuum.io/downloads) distribution of python 3.5+ or 2.7 installed. We will be using ipython notebook, if you are new to this I recommend this [tutorial](http://opentechschool.github.io/python-data-intro/core/notebook.html) from OpenTechSchool. You will also need a text editor to open the solutions for the projects. I recommend [Sublime Text](http://www.sublimetext.com/). Other options include Notepad, Notepad++, Text Wrangler, or Atom.
 
 ## Python
 The Zen of Python
