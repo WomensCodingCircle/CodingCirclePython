@@ -13,18 +13,19 @@ def yahtzee():
 	die4 = roll_die()
 	die5 = roll_die()
 	if die1 == die2 == die3 == die4 == die5:
-		print "Yahtzee!!"
+		print("Yahtzee!!")
 	return str(die1) + ", " + str(die2) + ", " +str(die3) + ", " +str(die4) + ", " +str(die5) 
 
 
 # Calls yahtzee 10 times
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
-print yahtzee()
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+print(yahtzee())
+
