@@ -14,7 +14,7 @@ def yahtzee():
 	die5 = roll_die()
 	if die1 == die2 == die3 == die4 == die5:
 		print("Yahtzee!!")
-	return str(die1) + ", " + str(die2) + ", " +str(die3) + ", " +str(die4) + ", " +str(die5) 
+	return str(die1) + ", " + str(die2) + ", " + str(die3) + ", " + str(die4) + ", " +str(die5) 
 
 
 # Calls yahtzee 10 times
