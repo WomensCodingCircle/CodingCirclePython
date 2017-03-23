@@ -16,77 +16,79 @@
 
 
 
-# dna ='GGCATGAAAGTCAGGGCAGAGCCATCTATTGCTTACATTTGCTTCTGACACAACTGTGTTCACTAGCAACCTCAAACAGACACCATGGTGCACCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAGGTTGGTATCAAGGTTACAAGACAGGTTTAAGGAGACCAATAGAAACTGGGCATGTGGAGACAGAGAAGACTCTTGGGTTTCTGATAGGCACTGACTCTCTCTGCCTATTGGTCTATTTTCCCACCCTTAGGCTGCTGGTGGTCTACCCTTGGACCCAGAGGTTCTTTGAGTCCTTTGGGGATCTGTCCACTCCTGATGCTGTTATGGGCAACCCTAAGGTGAAGGCTCATGGCAAGAAAGTGCTCGGTGCCTTTAGTGATGGCCTGGCTCACCTGGACAACCTCAAGGGCACCTTTGCCACACTGAGTGAGCTGCACTGTGACAAGCTGCACGTGGATCCTGAGAACTTCAGGGTGAGTCTATGGGACCCTTGATGTTTTCTTTCCCCTTCTTTTCTATGGTTAAGTTCATGTCATAGGAAGGGGAGAAGTAACAGGGTACAGTTTAGAATGGGAAACAGACGAATGATT'
+#dna ='GGCATGAAAGTCAGGGCAGAGCCATCTATTGCTTACATTTGCTTCTGACACAACTGTGTTCACTAGCAACCTCAAACAGACACCATGGTGCACCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAGGTTGGTATCAAGGTTACAAGACAGGTTTAAGGAGACCAATAGAAACTGGGCATGTGGAGACAGAGAAGACTCTTGGGTTTCTGATAGGCACTGACTCTCTCTGCCTATTGGTCTATTTTCCCACCCTTAGGCTGCTGGTGGTCTACCCTTGGACCCAGAGGTTCTTTGAGTCCTTTGGGGATCTGTCCACTCCTGATGCTGTTATGGGCAACCCTAAGGTGAAGGCTCATGGCAAGAAAGTGCTCGGTGCCTTTAGTGATGGCCTGGCTCACCTGGACAACCTCAAGGGCACCTTTGCCACACTGAGTGAGCTGCACTGTGACAAGCTGCACGTGGATCCTGAGAACTTCAGGGTGAGTCTATGGGACCCTTGATGTTTTCTTTCCCCTTCTTTTCTATGGTTAAGTTCATGTCATAGGAAGGGGAGAAGTAACAGGGTACAGTTTAGAATGGGAAACAGACGAATGATT'
 dna = 'GGGATGTTTGGGCCCTACGGGCCCTGATCGGCT'
-
-# each function is a neat little bit of code with comments
-# the name of the function reflects it's 'function'
-# a function has well-defined input and output
-# a function can call other functions
 
 def startCodonIndex(seq):
     # input: list of CAPs characters corresponding to DNA sequence  
     # output: index of first letter of start codon; return -1 if none are found
-    ind=seq.find('ATG')
-    return ind
+    start_idx = seq.find('ATG')
+    return start_idx
 
 def stopCodonIndex(seq, start_codon):
     # input: list of CAPs characters corresponding to DNA sequence and index of start codon  
     # output: index of first stop codon; return -1 if none are found
-    ii = start_codon+3
-    st_codon = -1
-    while st_codon == -1 and ii < len(seq):
-        codon = seq[ii:(ii+3)]
-        if codon == 'TAA':
-            st_codon = ii
-        if codon == 'TGA':
-            st_codon = ii
-        if codon == 'TAG':
-            st_codon = ii
-        ii += 3
-    return st_codon
+    stop_idx = -1
+    codon_length = 3
+    search_start = start_codon + codon_length
+    search_stop = len(seq)
+
+    for i in range(search_start, search_stop, codon_length):
+        codon = seq[i: i+codon_length]
+        if codon == "TAA" or codon == "TGA" or codon == "TAG":
+            stop_idx = i 
+            break
+    return stop_idx
 
 def codingDNA(seq):
     # input: list of CAPs characters corresponding to DNA   
     # output: coding sequence only, including start and stop codons 
-    aa = startCodonIndex(seq)
-    zz = stopCodonIndex(seq, startCodonIndex(seq))
-    new_seq=dna[aa:(zz+3)]  # why the +3?
+    start_idx = startCodonIndex(seq)
+    stop_idx = stopCodonIndex(seq, start_idx)
+    codon_length = 3
+    new_seq = dna[start_idx: stop_idx + codon_length] 
     return new_seq
 
 def numCodons(seq):
     # calculate the number of codons in the gene
     # input: coding DNA sequence
     # output: number of codons
-    coding_dna=codingDNA(seq)
-    return len(coding_dna)/3
+    codon_length = 3
+    num_codons = len(seq) / codon_length
+    # You don't need to run this line in python 2 because
+    # of integer division.
+    num_codons = int(num_codons)
+    return num_codons
 
-def dnaToRna(seq): # a better version than above; why?
+def transcription(seq): 
     # Transcription: (A->U), (T->A), (C->G), (G->C)
     # input: DNA coding squence
     # ouput: RNA sequence
     rna_seq=''
     for base in seq:
-        if base == 'A':
-            rna_seq += 'U'
-        if base == 'T':
-            rna_seq += 'A'
-        if base == 'C':
-            rna_seq += 'G'
-        if base == 'G':
-            rna_seq += 'C'
+        if base == "A":
+            rna_seq += "U"
+        if base == "T":
+            rna_seq += "A"
+        if base == "C":
+            rna_seq += "G"
+        if base == "G":
+            rna_seq += "C"
     return rna_seq
                         
 
 # calling the functions
 
+# It would be more accurate to calculate the number of codons from coding_dna
+codons = numCodons(dna)
 start =  startCodonIndex(dna)
 stop = stopCodonIndex(dna, start)
-coding_dna=codingDNA(dna) # why the +3?
-coding_rna = dnaToRna(coding_dna)
+coding_dna = codingDNA(dna) 
+coding_rna = transcription(coding_dna)
 
-print 'start codon :    '.format(start)
-print 'dna :            '.format(dna)
-print 'coding dna:      '.format(coding_dna)
-print 'transcribed rna: '.format(coding_rna)
-print 'number of codons '.format(numCodons(coding_dna))
+print("DNA: {}".format(dna))
+print("CODONS: {}".format(codons))
+print("START: {}".format(start))
+print("STOP: {}".format(stop))
+print("CODING DNA: {}".format(coding_dna))
+print("TRANSCRIBED RNA: {}".format(coding_rna))
