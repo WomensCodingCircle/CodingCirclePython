@@ -35,7 +35,7 @@ def acrostic(name):
 	for letter in name:
 		rand_idx = random.randint(0, len(adjectives[letter]) - 1)
 		current_adj = adjectives[letter][rand_idx]
-		print "{0}-{1}".format(letter, current_adj)
+		print(("{0}-{1}".format(letter, current_adj)))
 
 
 acrostic('Charlotte')

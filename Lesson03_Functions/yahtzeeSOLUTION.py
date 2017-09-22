@@ -18,14 +18,14 @@ def yahtzee():
 
 
 # Calls yahtzee 10 times
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
-print(yahtzee())
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
+print((yahtzee()))
 

@@ -13,7 +13,7 @@ with open('evidence.txt', 'r') as fh:
         # print the paragraph if we found a match to the regex
         if line == '\n':
             if found_match:
-                print ''.join(paragraph)
+                print((''.join(paragraph)))
             # Reset found_match and paragraph for the next paragraph
             found_match = False
             paragraph = []
