@@ -1,8 +1,8 @@
 def check_user_pass(user, password):
-    """
-    Checks to see if the user and password are a match
-    Returns: True if match, False if not
-    """
+	"""
+	Checks to see if the user and password are a match
+	Returns: True if match, False if not
+	"""
 	user_pass = {
 		'avery': 'rosebud',
 		'bruce': 'harley',
