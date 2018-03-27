@@ -3,7 +3,7 @@
 This repo contains a series of lesson to learn Python. These lessons are intended to allow people who have no prior programming experience to learn python. Each lesson in in the form of a jupyter notebook. They include lesson text, examples, try its (quick chances to apply concepts), and projects (small projects which have step by step instructions to practice the concepts you learn). Each lesson builds on its predecessor. The first eight lessons cover core python concepts, then comes a larger project, the last lessons are more focused topics for various applications.
 
 ## Prerequisites
-You need to have the [anaconda](https://www.continuum.io/downloads) distribution of python 3.5+ or 2.7 installed. We will be using Jupyter notebooks, if you are new to this I recommend this [tutorial](http://opentechschool.github.io/python-data-intro/core/notebook.html) from OpenTechSchool. You will also need a text editor to open the solutions for the projects. I recommend [Sublime Text](http://www.sublimetext.com/). Other options include Atom, Notepad++ (Windows only), BBEdit (Mac only), or Visual Studio Code.
+You need to have the [anaconda](https://www.continuum.io/downloads) distribution of python 3.6+ installed. We will be using Jupyter notebooks, if you are new to this I recommend this [tutorial](http://opentechschool.github.io/python-data-intro/core/notebook.html) from OpenTechSchool. You will also need a text editor to open the solutions for the projects. I recommend [Sublime Text](http://www.sublimetext.com/). Other options include Atom, Notepad++ (Windows only), BBEdit (Mac only), or Visual Studio Code.
 
 ## Python
 The Zen of Python
