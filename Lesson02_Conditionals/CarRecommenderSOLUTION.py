@@ -1,5 +1,5 @@
 # Ask get budget for car from user
-budget = eval(input("What is your budget for a car?\n"))
+budget = input("What is your budget for a car?\n")
 try:
     # input returns a string and we need a number so convert to int
     budget = int(budget)
